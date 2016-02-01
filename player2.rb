@@ -11,10 +11,10 @@ unless hort == 'new' || hort == 'start'
     exit(1)
 end
 
-def player
+def player1
       
-
 end
+
 def display
         puts "# ============================== #"
         puts "Welcome to the Battle arena"
@@ -22,16 +22,31 @@ def display
         puts "# Description: #"
         puts "# 1 type new to create a character #"
         puts "# 2. type start to begin the fight #"   
-        puts "put player name:", player, ".\n"
+        puts "put player name:", player1, ".\n"
+        hort = gets.chomp 
 end
 
 # Now toss the coin.
 toss = if rand(2) == 1 then
-    "heads"
+    "new"
 else
-    "tails"
+    "start"
 end
 
 # Report.
-print "rrr ", display, ".\n"
+print "Max Player 2 or 3 ", display, ".\n"
 print "You Win!\n" if hort == toss
+
+
+        puts "# ============================== #"
+        puts "Welcome to the Battle arena"
+        puts "# ------------------------------------------------- ---- #"
+        puts "# Battle Start: "
+        puts "who will attack : ", display
+        puts "who attacked : "
+        puts 'press the enter key'
+        names = gets
+        
+def player
+      
+end

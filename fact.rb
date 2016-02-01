@@ -1,76 +1,58 @@
-# Class names must be capitalized.  Technically, it's a constant.
-class Fred
-  
-  # The initialize method is the constructor.  The @val is
-  # an object value.
-  def initialize(v)
-    @val = v
-  end
+def menu
+ 
+puts "# ============================== #"
+puts "# Welcome to the Battle Arena #"
+puts "# ------------------------------------------------- ---- #"
+puts "# Description: #"
+puts "# 1 type new to create a character #"
+puts "# 2. type start to begin the fight #"
+puts "# ------------------------------------------------- ---- #"
+input = gets.chomp
 
-  # Set it and get it.
-  def set(v)
-    @val = v
-  end
-
-  def get
-    return @val
-  end
-
-  def more(y)
-    @val += y
-  end
-
-  def less(y)
-    @val -= y
-  end
-
-  def to_s
-    return "Fred(val=" + @val.to_s + ")"
-  end
+if input == 'new'
+ new_attack
+elsif input =='start'
+ start_attack
+else 
+  print "I _said_ new or start.  Can't you read?\n"
+end  
 end
 
-# Class Barney is derived from Fred with the usual meaning.
-class Barney < Fred
-  def initialize(x)
-    super(x)
-    @save = x
-  end
+def new_attack
+puts "# Put Player Name: #"
+nama_player_1 = gets.chomp
 
-  def chk
-    @save = @val
-  end
-
-  def restore
-    @val = @save
-  end
-
-  def to_s
-    return "(Backed-up) " + super + " [backup value: " + @save.to_s + "]"
-  end
+puts "# ============================== #"
+puts "# Welcome to the Battle Arena #"
+puts "# ------------------------------------------------- ---- #"
+puts "# Description: #"
+puts "# 1 type new to create a character #"
+puts "# 2. type start to begin the fight #"
+puts "# ------------------------------------------------- ---- #"
+puts "# Current Player: #"
+puts "# #{nama_player_1} #"
+puts "# * Max player 2 or 3 #"
+puts "# ------------------------------------------------- ---- #"
+input = gets.chomp
 
 end
+def start_attack
+Puts "# ============================== #"
+Puts "# Welcome to the Battle Arena #"
+Puts "# ------------------------------------------------- ---- #"
+Puts "Battle Start:"
+Puts "who will attack: #{nama_player_1}"
+Puts "who attacked: Player 2"
+nama_player_2 = gets.chomp
 
-# Objects are created by the new method of the class object.
-a = Fred.new(398)
-b = Barney.new(112)
-
-a.more(34)
-b.more(817)
-
-print "A: a = ", a, "\n   b = ", b, "\n";
-
-a.more(34)
-b.more(817)
-
-print "B: a = ", a, "\n   b = ", b, "\n";
-
-b.chk
-
-a.more(34)
-b.more(817)
-
-print "C: a = ", a, "\n   b = ", b, "\n";
-
-b.restore
-
-print "D: a = ", a, "\n   b = ", b, "\n";
+Puts "# ============================== #"
+Puts "# Welcome to the Battle Arena #"
+Puts "# ------------------------------------------------- ---- #"
+Puts "Battle Start:"
+Puts "who will attack: #{nama_player_1}"
+Puts "who attacked: #{nama_player_2}"
+Puts "Description:"
+Puts "#{nama_player_1}: manna = #{rest}, blood = #{rest}"
+Puts "#{nama_player_2}: manna = #{rest}, blood = #{rest}"
+end
+menu
