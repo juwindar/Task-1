@@ -1,0 +1,16 @@
+.avatar {
+        border: 1px solid white;
+        border-radius: 45px;
+        box-shadow: 1px 1px 155px rgba(0,0,0, 0.7);
+        display: block;
+        height: 90px;
+        width: 90px;
+}
+
+.avatar img {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 85px; /* must be width + border */
+        width: 80px;
+        height: 80px;
+}
+
